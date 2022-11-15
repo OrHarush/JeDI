@@ -3,25 +3,30 @@
   "version": "1.0.0",
   "description": "",
   "main": ".eslintrc.js",
-"scripts": {
-  "start": "nodemon --exec babel-node app.js",
-  "lint": "eslint --fix src/**"
-},
-"dependencies": {
-  "express": "*",
-  "express-async-router": "*",
-  "mongoose": "*"
-},
-"devDependencies": {
-  "@babel/core": "*",
-  "@babel/node": "*",
-  "@babel/preset-env": "*",
-  "dotenv": "*",
-  "eslint": "*",
-  "eslint-config-airbnb-base": "*",
-  "eslint-plugin-import": "*",
-  "nodemon": "*"
-},
+  "scripts": {
+    "start": "nodemon --exec babel-node src/app.js",
+    "lint": "eslint --fix src/**",
+    "build": "rimraf ../dist && babel src -d ../dist && copyfiles package.json ../dist/",
+    "prod": "node app"
+  },
+  "dependencies": {
+    "express": "*",
+    "express-async-router": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "@babel/core": "*",
+    "@babel/node": "*",
+    "@babel/preset-env": "*",
+    "babel-cli": "^6.26.0",
+    "copyfiles": "^2.4.1",
+    "dotenv": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-import": "*",
+    "nodemon": "*",
+    "rimraf": "^3.0.2"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
