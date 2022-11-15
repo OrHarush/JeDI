@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": ".eslintrc.js",
-  "scripts": {
+    "type": "module",
+"scripts": {
     "start": "nodemon --exec babel-node src/app.js",
     "lint": "eslint --fix src/**",
     "build": "rimraf ../dist && babel src -d ../dist && copyfiles package.json ../dist/",
