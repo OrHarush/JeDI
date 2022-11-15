@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": ".eslintrc.js",
+  "type": "module",
 "scripts": {
   "start": "nodemon --exec babel-node app.js",
   "lint": "eslint --fix src/**"

@@ -1,12 +1,10 @@
-import { ProviderProps } from "../../types";
-import GameProvider from "./GameProvider";
+import React from "react";
 import CustomThemeProvider from "./ThemeProvider";
 
-const AppProviders = ({ children }: ProviderProps) =>
-    <CustomThemeProvider>
-        <GameProvider>
+
+const AppProviders = ({ children }: any) =>
+        <CustomThemeProvider>
             {children}
-        </GameProvider>
-    </CustomThemeProvider>
+        </CustomThemeProvider>
 
 export default AppProviders
