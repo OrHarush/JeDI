@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from "@mui/material"
-import { ProviderProps } from "../../types";
+import React from "react";
 
 const theme = createTheme({
     palette: {
@@ -16,10 +16,10 @@ const theme = createTheme({
     }
 })
 
-const CustomThemeProvider = ({ children }: ProviderProps) =>
+const CustomThemeProvider = ({ children }) =>
     <ThemeProvider theme={theme} >
         {children}
-    </ThemeProvider >
+    </ThemeProvider>
 
 
 export default CustomThemeProvider;

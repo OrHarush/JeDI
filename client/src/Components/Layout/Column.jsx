@@ -1,6 +1,5 @@
 import { Box } from '@mui/material'
 
-
 const Column = ({ sx = [], ...props }) =>
     <Box sx={[
         {
