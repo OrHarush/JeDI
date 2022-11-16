@@ -4,7 +4,7 @@ RUN mkdir app
 
 WORKDIR app
 
-COPY . .
+COPY . app/
 
 RUN cd app/server/ && npm run build
 RUN cd app/client/ && npm run build
