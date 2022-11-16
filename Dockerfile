@@ -15,7 +15,7 @@ ENV NODE_ENV=production
 
 WORKDIR app
 
-COPY --from=builder app/dist .
+COPY --from=builder app/dist app/
 
 RUN npm install --production
 
