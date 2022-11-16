@@ -23,7 +23,7 @@ RUN pwd
 # RUN ls -l
 RUN npm install --production
 
-RUN chown -R 1001:0 /app/app/dist && chmod -R ug+rwx /app/app/dist
+RUN chown -R 1001:0 /app/app/dist && chmod -R ug+rwx /app/app/dist && chown -R 1001:0 "/.npm"
 
 USER 1001 
 
