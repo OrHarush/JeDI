@@ -17,7 +17,7 @@ RUN ls -l
 WORKDIR app
 RUN ls -l
 RUN pwd
-COPY ./dist .
+COPY /app/app/dist .
 RUN ls -l
 RUN npm install --production
 
