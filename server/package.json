@@ -13,7 +13,8 @@
     "@babel/cli": "^7.19.3",
     "express": "*",
     "express-async-router": "*",
-    "mongoose": "*"
+    "mongoose": "*",
+        "dotenv": "*"
   },
   "devDependencies": {
     "@babel/core": "*",
@@ -21,7 +22,6 @@
     "@babel/preset-env": "*",
     "babel-cli": "^6.26.0",
     "copyfiles": "^2.4.1",
-    "dotenv": "*",
     "eslint": "*",
     "eslint-config-airbnb-base": "*",
     "eslint-plugin-import": "*",
