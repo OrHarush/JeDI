@@ -27,4 +27,5 @@ RUN chown -R 1001:0 /app/app/dist && chmod -R ug+rwx /app/app/dist && chown -R 1
 
 USER 1001 
 
+
 CMD [ "npm" , "run", "prod"]
