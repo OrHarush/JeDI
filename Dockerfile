@@ -13,11 +13,12 @@ RUN ls
 FROM builder
 
 ENV NODE_ENV=production
-RUN ls
+RUN ls -l
 WORKDIR app
-RUN ls
+RUN ls -l
+RUN pwd
 COPY ./dist .
-RUN ls
+RUN ls -l
 RUN npm install --production
 
 CMD [ "npm" , "run", "prod"]
