@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run copy",
+    "copy": "copyfiles dist/* dist/** ../dist/",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "react-router-dom": "^6.4.1"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "vite": "^3.0.7"
   }
 }
