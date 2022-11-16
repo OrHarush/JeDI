@@ -12,6 +12,8 @@ RUN ls
 
 FROM builder
 
+USER root
+
 ENV NODE_ENV=production
 RUN ls -l
 WORKDIR /app/app/dist
@@ -20,5 +22,9 @@ RUN pwd
 # COPY dist/ .
 # RUN ls -l
 RUN npm install --production
+
+RUN chown -R 1001:0 /app/app/dist && chmod -R ug+rwx /app/app/dist && rpm-file-permissions
+
+USER 1001 
 
 CMD [ "npm" , "run", "prod"]
