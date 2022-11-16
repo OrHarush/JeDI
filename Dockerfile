@@ -14,11 +14,11 @@ FROM builder
 
 ENV NODE_ENV=production
 RUN ls -l
-WORKDIR app
+WORKDIR /app/app/dist
 RUN ls -l
 RUN pwd
-COPY /app/app/dist .
-RUN ls -l
+# COPY dist/ .
+# RUN ls -l
 RUN npm install --production
 
 CMD [ "npm" , "run", "prod"]
