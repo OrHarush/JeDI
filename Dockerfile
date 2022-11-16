@@ -6,8 +6,8 @@ WORKDIR app
 
 COPY . app/
 
-RUN cd app/server/ && npm run build
-RUN cd app/client/ && npm run build
+RUN cd app/server/ && npm i && npm run build
+RUN cd app/client/ && npm i && npm run build
 
 FROM builder
 
