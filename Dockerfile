@@ -16,7 +16,7 @@ ENV NODE_ENV=production
 RUN ls
 WORKDIR app
 RUN ls
-COPY dist .
+COPY ./dist .
 RUN ls
 RUN npm install --production
 
