@@ -10,6 +10,7 @@
     "prod": "node app"
   },
   "dependencies": {
+    "@babel/cli": "^7.19.3",
     "express": "*",
     "express-async-router": "*",
     "mongoose": "*"
