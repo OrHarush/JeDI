@@ -1,4 +1,4 @@
-import { Button, MenuItem, Select } from "@mui/material";
+import { Box, Button, MenuItem, Select } from "@mui/material";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -16,8 +16,11 @@ const Home = () => {
     };
 
     useEffect(() => {
-        if(filterValue === "שמירות") {
+        if (filterValue === "שמירות") {
             navigate("/shmirot")
+        }
+        if (filterValue === "תורנויות ניקיון") {
+            navigate("/cleaningDuties")
         }
     }, [filterValue])
 
@@ -26,32 +29,37 @@ const Home = () => {
             <Row
                 sx={{
                     width: "100%", height: "100%",
-                    flexDirection: "row", justifyContent: "end", alignItems: "center"
+                    flexDirection: "row", alignItems: "center", justifyContent: "space-between"
                 }}>
-                <Select
-                    labelId="filter"
-                    id="filter"
-                    value={filterValue}
-                    label="Filter"
-                    onChange={handleChange} sx={{ marginRight: "20px" }}>
-                    <MenuItem value="שמירות">שמירות</MenuItem>
-                    <MenuItem value="תורנויות">תורנויות</MenuItem>
-                    <MenuItem value="קבלנים">קבלנים</MenuItem>
-                </Select>
-                <Button variant="contained"
-                    sx={{
-                        width: "40px", height: "40px",
-                        backgroundColor: "gray", marginRight: "20px"
-                    }}>
-                    <Text text={"כולם"} />
-                </Button>
-                <Button variant="contained"
-                    sx={{
-                        width: "40px", height: "40px",
-                        backgroundColor: "gray", marginRight: "20px"
-                    }}>
-                    <Text text={"שלי"} />
-                </Button>
+                <Row>
+                    <Button variant="contained"
+                        sx={{
+                            width: "40px", height: "40px",
+                            backgroundColor: "gray", marginRight: "20px"
+                        }}>
+                        <Text text={"שלי"} />
+                    </Button>
+                    <Button variant="contained"
+                        sx={{
+                            width: "40px", height: "40px",
+                            backgroundColor: "gray", marginRight: "20px"
+                        }}>
+                        <Text text={"כולם"} />
+                    </Button>
+                    <Select
+                        labelId="filter"
+                        id="filter"
+                        value={filterValue}
+                        label="Filter"
+                        onChange={handleChange} sx={{ marginRight: "20px" }}>
+                        <MenuItem value="שמירות">שמירות</MenuItem>
+                        <MenuItem value="תורנויות ניקיון">תורנויות ניקיון</MenuItem>
+                        <MenuItem value="קבלנים">קבלנים</MenuItem>
+                    </Select>
+                </Row>
+
+                <Text variant='h3' sx={{paddingRight: '240px'}} text='התורנויות שלי'/>
+                    <Box></Box>
             </Row>
 
             <Calendar />

@@ -7,32 +7,32 @@ import Text from './Text';
 import { useState } from 'react';
 
 
-const Calendar = (props) => {
+const Calendar = () => {
     const numOfDaysWeek = 7;
     const numOfCalendarRows = 5;
 
 
     const getDayOfWeek = (i) => {
         if (i === 0) {
-            return "שבת";
+            return "ראשון";
         }
         if (i === 1) {
-            return "שישי";
+            return "שני";
         }
         if (i === 2) {
-            return "חמישי";
+            return "שלישי";
         }
         if (i === 3) {
             return "רביעי";
         }
         if (i === 4) {
-            return "שלישי";
+            return "חמישי";
         }
         if (i === 5) {
-            return "שני";
+            return "שישי";
         }
         if (i === 6) {
-            return "ראשון";
+            return "שבת";
         }
     }
 
@@ -42,7 +42,7 @@ const Calendar = (props) => {
                 {Array.from(Array(numOfDaysWeek)).map((_, i) =>
                     <Text key={i} sx={{
                         width: "calc(100vw/7)", border: "1px solid black", paddingRight: "5px",
-                        display: "flex", justifyContent: "end"
+                        display: "flex", justifyContent: "center"
                     }} text={getDayOfWeek(i)} />
                 )}
             </Row>

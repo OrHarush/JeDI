@@ -14,4 +14,8 @@ export const Rank = {
     "Sergeant": "סמל",
     "FirstSergeant": "סמל ראשון",
     "MajorSergeant": "רב סמל",
+    "AcademicOfficer": "קצין אקדמאי",
+    "Segen": "סגן",
+    "Segem": "סגם",
+    "Seren": "סרן",
 };

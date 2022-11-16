@@ -4,7 +4,9 @@ import Home from "./Pages/Home/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Pages/Login/Login";
 import ShmirotCalendar from "./Components/Common/ShmirotCalendar";
+import NewDuty from "./Pages/NewDuty/NewDuty";
 import AppProviders from "./Providers/AppProviders";
+import CleaningDuties from "./Pages/CleaningDuties/CleaningDuties";
 
 const App = () => {
     return (
@@ -15,6 +17,8 @@ const App = () => {
                         <Route path="/" element={<Login />} />
                         <Route path="/home" element={<Home />} />
                         <Route path="/shmirot" element={<ShmirotCalendar />} />
+                        <Route path="/newDuty" element={<NewDuty />} />
+                        <Route path="/cleaningDuties" element={<CleaningDuties />} />
                     </Route>
                 </Routes>
             </BrowserRouter>

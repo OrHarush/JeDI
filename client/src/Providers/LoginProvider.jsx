@@ -6,7 +6,7 @@ const loginContext = React.createContext();
 export const useLoginContext = () => useContext(loginContext);
 
 const LoginProvider = ({ children }) => {
-    const [isLogged, setIsLogged] = useState(false);
+    const [isLogged, setIsLogged] = useState(localStorage.getItem('LoginToken'));
 
     return (
         <loginContext.Provider value={{isLogged, setIsLogged}}>

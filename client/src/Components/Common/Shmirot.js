@@ -32,6 +32,8 @@ export const shmirot = [
     { date: 25, mefaked: "גל בכר", shomer: "איתי צעיר הרים", yohalam: "", konan1: "שגיא תעיזי"  },
     { date: 26, mefaked: "נמרוד שילה", shomer: "עידו אלבראנס", yohalam: "", konan1: "בן חכמון"  },
     { date: 27, mefaked: "נמרוד שילה", shomer: "עידו אלבראנס", yohalam: "", konan1: "בן חכמון"  },
-
-    { date: 0, mefaked: "", shomer: "", yohalam: "", konan1: ""  },
+    { date: 28, mefaked: "נמרוד שילה", shomer: "עידו אלבראנס", yohalam: "", konan1: "בן חכמון"  },
+    { date: 29, mefaked: "נמרוד שילה", shomer: "עידו אלבראנס", yohalam: "", konan1: "בן חכמון"  },
+    { date: 30, mefaked: "נמרוד שילה", shomer: "עידו אלבראנס", yohalam: "", konan1: "בן חכמון"  },
+    { date: 31, mefaked: "נמרוד שילה", shomer: "עידו אלבראנס", yohalam: "", konan1: "בן חכמון"  },
 ];
